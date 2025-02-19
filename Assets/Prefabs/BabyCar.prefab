@@ -191,6 +191,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 64
+  groundCheckDistance: 1.5
 --- !u!1001 &1783942076742625743
 PrefabInstance:
   m_ObjectHideFlags: 0
