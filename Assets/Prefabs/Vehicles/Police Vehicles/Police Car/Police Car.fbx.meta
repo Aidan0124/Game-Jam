@@ -3,7 +3,62 @@ guid: 9fb589b22c83c984db9c17128d85356a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Police
+    second: {fileID: 2100000, guid: 7eb88f07cac19154face57ff4dbd20ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Wheel
+    second: {fileID: 2100000, guid: d8b0f6a6fe2348c43a1640589754fa36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey Wheels
+    second: {fileID: 2100000, guid: 48a837d038215a440910dcc9a5ca7490, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey.001
+    second: {fileID: 2100000, guid: a4e1e42f20802fb4a98c8b1606a206b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: 3a6486bb07611ba4fbd051a0266bf3a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Police Blue
+    second: {fileID: 2100000, guid: 74441cb484764594a81e777d3ad1ff1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Police Red
+    second: {fileID: 2100000, guid: d4c400751439b5e4bb751d9f69c71c41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Police Window
+    second: {fileID: 2100000, guid: 40510bc232d211841a7f1583e401c861, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sliver
+    second: {fileID: 2100000, guid: 7ea921908734ae048a8d9e589e3af595, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 14820f7fd6df7ec47883232487bf3977, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: 2a6432578d22b6e449190190088df560, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
