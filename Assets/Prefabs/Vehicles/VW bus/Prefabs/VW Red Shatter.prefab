@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.66867
+      value: -4.454262
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.287645
+      value: -11.287642
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.8719635
+      value: 26.34301
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56,6 +56,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6736818651925756333}
     - targetCorrespondingSourceObject: {fileID: -7476202275259384914, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1445975236235658116}
@@ -2223,6 +2226,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1575944761777230402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
+  m_PrefabInstance: {fileID: 1810315902761283347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6736818651925756333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575944761777230402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddf2edea45acab47a560cb8c496074b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1584580079822033747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 928312819330350144, guid: c1cf26bec11a9b64fb91bfff4fdb67b2, type: 3}
