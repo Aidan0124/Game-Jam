@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -47.967304
+      value: -31.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.470483
+      value: -0.029996872
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.256739
+      value: 39.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b2f5e4fb4cf518f45ba20b90b3111b65, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -100,7 +100,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396372992977558896}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -132,3 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 204763304989494970, guid: 21c0658a73e10b34bb56363e273901ca, type: 3}
+  cameraFollow: {fileID: 0}

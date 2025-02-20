@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11
+      value: 0.46848392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.21
+      value: 15.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8914d5f4965cd45987efc006373566, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -100,7 +100,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029090893057607082}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -132,3 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 3204153596027515663, guid: 7b8573fbe97bbdf48b4eaee32c87a616, type: 3}
+  cameraFollow: {fileID: 0}

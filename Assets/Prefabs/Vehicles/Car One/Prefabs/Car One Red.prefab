@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.25
+      value: -27.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 0.36048412
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.92
+      value: 44.510002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8273335d017ead34fb612ccdee2aaf8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -100,7 +100,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2206333533405896941}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 75
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -132,3 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 4277393602765300697, guid: 6b99e28b4d4c940469024930336d643a, type: 3}
+  cameraFollow: {fileID: 0}
