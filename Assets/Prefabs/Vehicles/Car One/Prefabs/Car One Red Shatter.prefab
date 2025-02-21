@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fe1c9a856a5e1d246bc09de353569cd3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3941345
+      value: -67.32085
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe1c9a856a5e1d246bc09de353569cd3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.04536
+      value: -11.045359
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe1c9a856a5e1d246bc09de353569cd3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.8582811
+      value: -4.8501835
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe1c9a856a5e1d246bc09de353569cd3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3527,6 +3527,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddf2edea45acab47a560cb8c496074b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 15
+  maxDistance: 30
+  startSounds:
+  - {fileID: 8300000, guid: 192ca30de64e5854ab2ccba200ca4294, type: 3}
+  - {fileID: 8300000, guid: c97d32ef68d0acc44b354d89b8505ca9, type: 3}
+  - {fileID: 8300000, guid: 6033f78b292fb3341a4c9f0b5d068b64, type: 3}
+  - {fileID: 8300000, guid: 1c96f72462ef63246847f87657247b71, type: 3}
+  - {fileID: 8300000, guid: b81a6f2c965cba84a8b0240604f50460, type: 3}
+  - {fileID: 8300000, guid: 1dc61fe2b52d122419e8c4e9e0476ddc, type: 3}
+  - {fileID: 8300000, guid: e885144d93a94924d8ba6f8feb96de26, type: 3}
+  - {fileID: 8300000, guid: 5711582d4f6b85b4aa409543dc702093, type: 3}
 --- !u!1 &4354110807317501452 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8362661460004910972, guid: fe1c9a856a5e1d246bc09de353569cd3, type: 3}

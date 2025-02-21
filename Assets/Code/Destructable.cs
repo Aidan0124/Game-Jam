@@ -19,7 +19,7 @@ public class Destructable : MonoBehaviour
                 // Trigger camera shake
                 if (cameraFollow != null)
                 {
-                    StartCoroutine(cameraFollow.Shake(0.5f, 0.2f)); // Adjust duration and magnitude as needed
+                    StartCoroutine(cameraFollow.Shake(0.5f, .5f)); // Adjust duration and magnitude as needed
                 }
                 else
                 {
