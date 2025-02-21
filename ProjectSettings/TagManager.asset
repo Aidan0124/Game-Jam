@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Sphere
+  - JumpUp
+  - TeleportUp
+  - SpeedUp
   layers:
   - Default
   - TransparentFX
