@@ -38,7 +38,7 @@ public class Jumper : MonoBehaviour
         {
             if (jumpCount > 0 && Input.GetKeyDown(KeyCode.Space))
             {
-                GetComponent<Rigidbody>().AddForce(Vector3.up * 10, ForceMode.Impulse);
+                GetComponent<Rigidbody>().AddForce(Vector3.up * 300, ForceMode.Impulse);
                 jumpCount--;
 
                 if (jumpCount == 0)
