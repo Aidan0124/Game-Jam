@@ -3,7 +3,7 @@ using UnityEngine;
 public class Shunt : MonoBehaviour
 {
     public float powerUpTime = 10f;
-    public float teleportDistance = 5f; // Distance to teleport
+    public float teleportDistance = 5f; 
     private float powerUpTimer;
     public bool isShunt = false;
 
@@ -23,12 +23,12 @@ public class Shunt : MonoBehaviour
             }
             else
             {
-                isShunt = false; // Disable teleporting after time runs out
+                isShunt = false; 
                 Debug.Log("Shunt power-up expired!");
             }
         }
 
-        // Only teleport if power-up is active
+  
         if (isShunt && Input.GetKeyDown(KeyCode.LeftShift))
         {
             Teleport();
