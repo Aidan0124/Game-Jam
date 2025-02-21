@@ -6,7 +6,7 @@ public class Jumper : MonoBehaviour
 
     public bool grounded = true;
     public int jumpCount = 2;
-    public float powerUpTime = 10f;
+    public float powerUpTime = 100f;
 
     private float powerUpTimer;
 
@@ -38,7 +38,7 @@ public class Jumper : MonoBehaviour
         {
             if (jumpCount > 0 && Input.GetKeyDown(KeyCode.Space))
             {
-                GetComponent<Rigidbody>().AddForce(Vector3.up * 300, ForceMode.Impulse);
+                GetComponent<Rigidbody>().AddForce(Vector3.up * 5000, ForceMode.Impulse);
                 jumpCount--;
 
                 if (jumpCount == 0)
