@@ -1161,11 +1161,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b6634d11654654408c44289a224665f, type: 3}
---- !u!54 &1322581237 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 4631620710452923260, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
-  m_PrefabInstance: {fileID: 1381785372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1381785372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,29 +1169,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3317439874078158457, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
-      propertyPath: carRigidbody
-      value: 
-      objectReference: {fileID: 1322581237}
     - target: {fileID: 4619719387389582063, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
       propertyPath: m_Name
       value: CarHolder 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5163373548330317804, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248630869143552442, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
-      propertyPath: m_Volume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248630869143552442, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6248630869143552442, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
+    - target: {fileID: 4631620710452923260, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
+      propertyPath: m_Mass
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 7734069471421724931, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1238,7 +1217,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8073785623399483827, guid: 591504382adf7fe4fba2f359bbaca073, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

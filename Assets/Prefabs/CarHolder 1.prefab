@@ -117,12 +117,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.014958458, y: 0.012365081, z: 0.0014862096}
-  m_Center: {x: -0.00006331205, y: -0.01622648, z: 0.00519453}
+  m_Size: {x: 0.020924492, y: 0.03770074, z: 0.010409293}
+  m_Center: {x: -0.00008364439, y: -0.0035587382, z: 0.00073308276}
 --- !u!65 &8073785623399483827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.019372774, y: 0.010721559, z: 0.0014476809}
   m_Center: {x: -0.000043863653, y: 0.010111265, z: 0.006005945}
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 1119849288969634328}
   m_Layer: 9
   m_Name: CarSphere
-  m_TagString: Player
+  m_TagString: Sphere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

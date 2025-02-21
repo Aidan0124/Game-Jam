@@ -7,9 +7,9 @@ public class Destructable : MonoBehaviour
     [SerializeField] private GameObject destroyedVersion;
     [SerializeField] private FollowCamera cameraFollow; // Reference to FollowCamera script
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             if (destroyedVersion != null)
             {
