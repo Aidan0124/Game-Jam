@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Fade_Out : MonoBehaviour
 {
-    [SerializeField] private float destroyTime = 15.0f;
-    [SerializeField] private float maxDistance = 30.0f; // Maximum distance to destroy the object
+ private float destroyTime = 15.0f;
+ private float maxDistance = 30.0f; // Maximum distance to destroy the object
     [SerializeField] private AudioClip[] startSounds; // Array of start sound effects
     private AudioSource audioSource;
     private Transform playerTransform;
