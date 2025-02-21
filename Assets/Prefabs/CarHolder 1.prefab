@@ -409,6 +409,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a51d956c46f6cd54198543d79c4c988d, type: 3}
   - {fileID: 8300000, guid: 792ffe8cf72d63e46bc5bee07c85ba0d, type: 3}
   - {fileID: 8300000, guid: 67c165ee60c49d24d928bf4c40d7e8e2, type: 3}
+  carRigidbody: {fileID: 4631620710452923260}
 --- !u!82 &6248630869143552442
 AudioSource:
   m_ObjectHideFlags: 0
@@ -421,8 +422,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.031
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -433,7 +434,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
