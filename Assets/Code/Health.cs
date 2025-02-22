@@ -1,16 +1,33 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float health = 100f;
+    public float maxHealth = 100f;
+
+    void OCollisionEnter(Collision collision)
     {
-        
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            health -= 10f;
+            Debug.Log("Health: " + health);
+        }
+        if(health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(health > maxHealth)
+        {
+            health = 100f;
+        }
     }
+    
+
 }
