@@ -4,32 +4,43 @@ using UnityEngine;
 public class CarFinal : MonoBehaviour
 {
     public Rigidbody sphereRB;
-    
+
     private bool isCarGrounded;
     private float moveInput;
     private float turnInput;
+    private float currentYaw;
+    private Vector3 velocity = Vector3.zero;
 
     public float airDampner;
     public float groundDampner;
-    public float moveSpeed; 
-    public float reverseSpeed; 
+    public float moveSpeed;
+    public float reverseSpeed;
     public float turnSpeed;
     public LayerMask ground;
     public float groundCheckDistance = 1.5f;
+    public float smoothTime = 0.2f;
+    public string carLayerName = "Car";
+
+    private Vector3 spherePreviousPosition;
 
     void Start()
     {
+        currentYaw = transform.eulerAngles.y;
         sphereRB.transform.parent = null;
+        spherePreviousPosition = sphereRB.position;
     }
 
     void Update()
     {
         moveInput = Input.GetAxisRaw("Vertical");
         turnInput = Input.GetAxisRaw("Horizontal");
-        
+
+        int carLayer = LayerMask.NameToLayer(carLayerName);
+        int groundLayerMask = ground.value & ~(1 << carLayer);
+
         RaycastHit hit;
-        isCarGrounded = Physics.Raycast(transform.position, -transform.up, out hit, groundCheckDistance, ground);
-        
+        isCarGrounded = Physics.Raycast(sphereRB.position, -Vector3.up, out hit, groundCheckDistance, ground);
+
         if (isCarGrounded)
         {
             moveInput *= moveInput > 0 ? moveSpeed : reverseSpeed;
@@ -40,21 +51,32 @@ public class CarFinal : MonoBehaviour
             turnInput = 0;
         }
 
-        transform.position = sphereRB.position;
-        
+
+        Vector3 targetPosition = sphereRB.position + new Vector3(0, -0.5f, 0);
+        Vector3 directionToTarget = targetPosition - transform.position;
+
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+
         if (isCarGrounded)
         {
-            Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+            currentYaw += turnInput * turnSpeed * Time.deltaTime;
+
+            Quaternion yawRotation = Quaternion.Euler(0, currentYaw, 0);
+
+            Quaternion groundAlignment = Quaternion.FromToRotation(Vector3.up, hit.normal);
+
+            Quaternion targetRotation = groundAlignment * yawRotation;
+
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
 
-        if (isCarGrounded)
-        {
-            float newRotation = turnInput * turnSpeed * Time.deltaTime * Mathf.Sign(moveInput);
-            transform.Rotate(0, newRotation, 0, Space.World);
-        }
 
         sphereRB.linearDamping = isCarGrounded ? groundDampner : airDampner;
+
+
+        spherePreviousPosition = sphereRB.position;
     }
 
     private void FixedUpdate()
@@ -63,13 +85,10 @@ public class CarFinal : MonoBehaviour
         {
             sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration);
         }
-        
+
         if (!isCarGrounded)
         {
             sphereRB.AddForce(Vector3.down * 9.81f, ForceMode.Acceleration);
         }
-    } 
+    }
 }
-
-
-
