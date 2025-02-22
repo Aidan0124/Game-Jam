@@ -5,7 +5,17 @@ using System.Collections.Generic;
 public class Destructable : MonoBehaviour
 {
     [SerializeField] private GameObject destroyedVersion;
-    [SerializeField] private FollowCamera cameraFollow; // Reference to FollowCamera script
+    private FollowCamera cameraFollow; // Reference to FollowCamera script
+
+    void Start()
+    {
+        // Assign the FollowCamera reference programmatically
+        cameraFollow = FindObjectOfType<FollowCamera>();
+        if (cameraFollow == null)
+        {
+            Debug.LogWarning("FollowCamera script not found in the scene.");
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
