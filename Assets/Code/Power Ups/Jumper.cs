@@ -6,7 +6,7 @@ public class Jumper : MonoBehaviour
 
     public bool grounded = true;
     public int jumpCount = 2;
-    public float powerUpTime = 100f;
+    public float powerUpTime = 10f;
 
     private float powerUpTimer;
 

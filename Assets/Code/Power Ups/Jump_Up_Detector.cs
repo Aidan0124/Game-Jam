@@ -5,7 +5,7 @@ public class Jump_Up_Detector : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Sphere"))
         {
             Jumper jumper = other.GetComponent<Jumper>();
             if (jumper != null)
