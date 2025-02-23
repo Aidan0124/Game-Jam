@@ -1,33 +1,50 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     public float health = 100f;
     public float maxHealth = 100f;
+    public ShieldManager shieldManager; 
 
-    void OCollisionEnter(Collision collision)
+    void Start()
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if (shieldManager == null)
+        {
+            shieldManager = GetComponent<ShieldManager>();
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+
+        if (!shieldManager.IsShieldActive() && collider.gameObject.CompareTag("Enemy"))
         {
             health -= 10f;
             Debug.Log("Health: " + health);
-        }
-        if(health <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+
+            if (health <= 0)
+            {
+                health = 0f; 
+                HandleDeath();
+            }
         }
     }
 
     void Update()
     {
-        if(health > maxHealth)
+
+        if (health > maxHealth)
         {
-            health = 100f;
+            health = maxHealth;
         }
     }
-    
 
+    void HandleDeath()
+    {
+        // Reload the scene when health reaches zero
+        Debug.Log("Player is dead! Loading next scene...");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }

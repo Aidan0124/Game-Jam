@@ -1,19 +1,18 @@
 using UnityEngine;
 
-public class Invuln_Up_Detector : MonoBehaviour
+public class Health_Up_Detector : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Sphere"))
         {
-            ShieldManager isShield = other.GetComponent<ShieldManager>();
-            if (isShield != null)
+            if (other.TryGetComponent<Health>(out Health health))
             {
-                isShield.ActivateShield();
+                health.health += 10f;
             }
             Destroy(gameObject);
-            Debug.Log("Player has picked up the invulnerability power up!");
+            Debug.Log("Player has picked up the health power up!");
         }
     }
 }
