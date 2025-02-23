@@ -8,6 +8,7 @@ public class NPCPathFollower : MonoBehaviour
     public float waitTime = 1f; // Time to wait at waypoints
     public float detectionRadius = 3f; // Player detection radius
     public LayerMask playerLayer; // Assign to Player layer
+    public float rotationAngle = 90f; // Editable rotation amount
 
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
@@ -25,27 +26,24 @@ public class NPCPathFollower : MonoBehaviour
         Transform targetWaypoint = waypoints[currentWaypointIndex];
 
         // Move toward the target waypoint
-        Vector3 direction = (targetWaypoint.position - transform.position).normalized;
         transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, speed * Time.deltaTime);
-
-        // Rotate toward movement direction
-        if (direction != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
-        }
 
         // Check if the NPC has reached the waypoint
         if (Vector3.Distance(transform.position, targetWaypoint.position) < 0.1f)
         {
-            StartCoroutine(WaitAtWaypoint());
+            StartCoroutine(RotateAndWait());
         }
     }
 
-    IEnumerator WaitAtWaypoint()
+    IEnumerator RotateAndWait()
     {
         isWaiting = true;
         yield return new WaitForSeconds(waitTime);
+
+        // Rotate by the user-defined amount
+        transform.Rotate(0, rotationAngle, 0);
+
+        // Move to the next waypoint
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         isWaiting = false;
     }
