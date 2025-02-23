@@ -3,7 +3,7 @@ using UnityEngine;
 public class ShieldManager : MonoBehaviour
 {
     public bool isShield = false;
-    public float shieldDuration = 10f; // Duration for the shield in seconds
+    public float shieldDuration = 10f; 
     private float shieldTimer;
 
     void Start()
@@ -13,14 +13,17 @@ public class ShieldManager : MonoBehaviour
 
     void Update()
     {
-        // Handle shield timer countdown
         if (isShield)
         {
-            shieldTimer -= Time.deltaTime; // Count down the shield timer
-            if (shieldTimer <= 0)
+            if(shieldTimer > 0)
             {
-                isShield = false; // Deactivate shield
-                shieldTimer = 0; // Reset the timer
+                shieldTimer -= Time.deltaTime;
+                Debug.Log(shieldTimer);
+            }
+            else
+            {
+                isShield = false; 
+                shieldTimer = shieldDuration; 
                 Debug.Log("Shield deactivated");
             }
         }
@@ -28,7 +31,7 @@ public class ShieldManager : MonoBehaviour
 
     public void ActivateShield()
     {
-        // Activate shield and reset the timer
+
         isShield = true;
         shieldTimer = shieldDuration;
         Debug.Log("Shield activated for " + shieldDuration + " seconds");

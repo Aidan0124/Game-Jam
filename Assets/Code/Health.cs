@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 90f;
     public float maxHealth = 100f;
     public ShieldManager shieldManager; 
 
@@ -38,6 +38,8 @@ public class Health : MonoBehaviour
         if (health > maxHealth)
         {
             health = maxHealth;
+            Debug.Log("Overheal blocked");
+            Debug.Log("Health: " + health);
         }
     }
 

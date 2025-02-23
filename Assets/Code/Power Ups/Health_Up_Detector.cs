@@ -2,17 +2,31 @@ using UnityEngine;
 
 public class Health_Up_Detector : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collision)
     {
-        if(other.CompareTag("Sphere"))
+        if (collision.CompareTag("Sphere")) 
         {
-            if (other.TryGetComponent<Health>(out Health health))
+            GameObject mainCar = GameObject.Find("MainCarJoined");
+
+            if (mainCar != null)
             {
-                health.health += 10f;
+                HealthManager healthManager = mainCar.GetComponent<HealthManager>();
+
+                if (healthManager != null)
+                {
+                    healthManager.AddHealth();
+                    Destroy(gameObject);
+                    Debug.Log("Player has picked up the health power-up!");
+                }
+                else
+                {
+                    Debug.LogError("HealthManager not found on MainCarJoined!");
+                }
             }
-            Destroy(gameObject);
-            Debug.Log("Player has picked up the health power up!");
+            else
+            {
+                Debug.LogError("MainCarJoined GameObject not found in the scene!");
+            }
         }
     }
 }
