@@ -9,6 +9,8 @@ TagManager:
   - JumpUp
   - TeleportUp
   - SpeedUp
+  - Enemy
+  - InvulnUp
   layers:
   - Default
   - TransparentFX
